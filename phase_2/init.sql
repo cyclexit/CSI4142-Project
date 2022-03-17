@@ -52,3 +52,14 @@ CREATE TABLE [IF NOT EXISTS] Event_Dimension(
     event_end_date date,
 );
 
+CREATE TABLE [IF NOT EXISTS] Education_Dimension(
+    education_key int primary key,
+    public_spending_percent_of_gdp float,
+    literacy_rate_total float,
+    literacy_rate_male float,
+    literacy_rate_female float,
+    primary_school_enrollment_percent_of_gross float,
+    secondary_school_enrollment_percent_of_gross float,
+    tertiary_school_enrollment_percent_of_gross float
+);
+
