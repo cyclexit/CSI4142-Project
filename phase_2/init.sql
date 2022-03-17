@@ -26,3 +26,19 @@ CREATE TABLE [IF NOT EXISTS] Year_Dimension(
     year_num int,
     decade int
 );
+
+CREATE TABLE [IF NOT EXISTS] Population_Dimension(
+    population_key int primary,
+    life_expectancy_male int,
+    life_expectancy_female int,
+    birth_rate float,
+    death_rate float,
+    growth_rate float,
+    fertility_rate float,
+    total_population bigint,
+    urban_population bigint,
+    rural_population bigint,
+    population_ages_0_to_14 bigint,
+    population_ages_15_to_64 bigint,
+    population_ages_65_and_above bigint,
+);
