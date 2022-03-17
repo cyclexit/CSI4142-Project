@@ -1,7 +1,7 @@
-CREATE SCHEMA [IF NOT EXISTS] CSI4142_Project;
+CREATE SCHEMA CSI4142_Project;
 SET search_path = "CSI4142_Project";
 
-CREATE TABLE [IF NOT EXISTS] Country_Dimension(
+CREATE TABLE Country_Dimension(
     country_key int primary key,
     region varchar(255),
     continent varchar(255),
@@ -21,14 +21,14 @@ CREATE TABLE [IF NOT EXISTS] Country_Dimension(
     gni_per_capita_usd float
 );
 
-CREATE TABLE [IF NOT EXISTS] Year_Dimension(
+CREATE TABLE Year_Dimension(
     year_key int primary key,
     year_num int,
     decade int
 );
 
-CREATE TABLE [IF NOT EXISTS] Population_Dimension(
-    population_key int primary,
+CREATE TABLE Population_Dimension(
+    population_key int primary key,
     life_expectancy_male int,
     life_expectancy_female int,
     birth_rate float,
@@ -43,7 +43,7 @@ CREATE TABLE [IF NOT EXISTS] Population_Dimension(
     population_ages_65_and_above bigint
 );
 
-CREATE TABLE [IF NOT EXISTS] Event_Dimension(
+CREATE TABLE Event_Dimension(
     event_key int primary key,
     event_name varchar(255),
     event_description varchar(255),
@@ -52,7 +52,7 @@ CREATE TABLE [IF NOT EXISTS] Event_Dimension(
     event_end_date date
 );
 
-CREATE TABLE [IF NOT EXISTS] Education_Dimension(
+CREATE TABLE Education_Dimension(
     education_key int primary key,
     public_spending_percent_of_gdp float,
     literacy_rate_adult_total float,
@@ -68,8 +68,8 @@ CREATE TABLE [IF NOT EXISTS] Education_Dimension(
     tertiary_school_enrollment_percent_of_gross float
 );
 
-CREATE TABLE [IF NOT EXISTS] Life_Quality_Dimension(
-    life_quality_key int primary,
+CREATE TABLE Life_Quality_Dimension(
+    life_quality_key int primary key,
     basic_drinking_water_rate float,
     basic_drinking_water_rate_rural float,
     basic_drinking_water_rate_urban float,
@@ -84,7 +84,7 @@ CREATE TABLE [IF NOT EXISTS] Life_Quality_Dimension(
     open_defecation_rate_urban float
 );
 
-CREATE TABLE [IF NOT EXISTS] Health_Dimension(
+CREATE TABLE Health_Dimension(
     health_key int primary key,
     capital_health_expenditure_percent_of_gdp float,
     current_health_expenditure_percent_of_gdp float,
@@ -103,4 +103,17 @@ CREATE TABLE [IF NOT EXISTS] Health_Dimension(
     hospital_beds_per_1000 float,
     physicians_per_1000 float,
     number_of_stillbirths int
+);
+
+CREATE TABLE FACT_TABLE(
+    country_key int,
+    year_key int,
+    education_key int,
+    health_key int,
+    life_quality_key int,
+    population_key int,
+    event_key int,
+    quality_of_life_index float,
+    development_index int,
+    human_development_index float
 );
