@@ -42,3 +42,13 @@ CREATE TABLE [IF NOT EXISTS] Population_Dimension(
     population_ages_15_to_64 bigint,
     population_ages_65_and_above bigint,
 );
+
+CREATE TABLE [IF NOT EXISTS] Event_Dimension(
+    event_key int primary key,
+    event_name varchar(255),
+    event_description varchar(255),
+    event_outcome varchar(255),
+    event_start_date date,
+    event_end_date date,
+);
+
