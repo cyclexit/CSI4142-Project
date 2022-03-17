@@ -68,3 +68,18 @@ CREATE TABLE [IF NOT EXISTS] Education_Dimension(
     tertiary_school_enrollment_percent_of_gross float
 );
 
+CREATE TABLE [IF NOT EXISTS] Life_Quality_Dimension(
+    life_quality_key int primary,
+    basic_drinking_water_rate float,
+    basic_drinking_water_rate_rural float,
+    basic_drinking_water_rate_urban float,
+    safe_drinking_water_rate float,
+    safe_drinking_water_rate_rural float,
+    safe_drinking_water_rate_urban float,
+    basic_handwashing_facilities_rate float,
+    basic_handwashing_facilities_rate_rural float,
+    basic_handwashing_facilities_rate_urban float,
+    open_defecation_rate float,
+    open_defecation_rate_rural float,
+    open_defecation_rate_urban float,
+);
