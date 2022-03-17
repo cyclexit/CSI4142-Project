@@ -1,5 +1,5 @@
-CREATE SCHEMA [IF NOT EXISTS] CSI4142-Project;
-SET search_path = "CSI4142-Project";
+CREATE SCHEMA [IF NOT EXISTS] CSI4142_Project;
+SET search_path = "CSI4142_Project";
 
 CREATE TABLE [IF NOT EXISTS] Country_Dimension(
     country_key int primary key,
