@@ -40,7 +40,7 @@ CREATE TABLE [IF NOT EXISTS] Population_Dimension(
     rural_population bigint,
     population_ages_0_to_14 bigint,
     population_ages_15_to_64 bigint,
-    population_ages_65_and_above bigint,
+    population_ages_65_and_above bigint
 );
 
 CREATE TABLE [IF NOT EXISTS] Event_Dimension(
@@ -49,7 +49,7 @@ CREATE TABLE [IF NOT EXISTS] Event_Dimension(
     event_description varchar(255),
     event_outcome varchar(255),
     event_start_date date,
-    event_end_date date,
+    event_end_date date
 );
 
 CREATE TABLE [IF NOT EXISTS] Education_Dimension(
@@ -81,5 +81,26 @@ CREATE TABLE [IF NOT EXISTS] Life_Quality_Dimension(
     basic_handwashing_facilities_rate_urban float,
     open_defecation_rate float,
     open_defecation_rate_rural float,
-    open_defecation_rate_urban float,
+    open_defecation_rate_urban float
+);
+
+CREATE TABLE [IF NOT EXISTS] Health_Dimension(
+    health_key int primary key,
+    capital_health_expenditure_percent_of_gdp float,
+    current_health_expenditure_percent_of_gdp float,
+    government_health_expenditure_percent_of_gdp float,
+    community_health_workers_per_1000 int,
+    prevalence_of_hiv float,
+    prevalence_of_hiv_male float,
+    prevalence_of_hiv_female float,
+    adults_with_hiv int,
+    children_with_hiv int,
+    prevalence_of_overweight_adult float,
+    prevalence_of_overweight_children_under_5 float,
+    prevalence_of_severe_wasting_children_under_5 float,
+    prevalence_of_stunting_children_under_5 float,
+    prevalence_of_undernourishment float,
+    hospital_beds_per_1000 float,
+    physicians_per_1000 float,
+    number_of_stillbirths int
 );
