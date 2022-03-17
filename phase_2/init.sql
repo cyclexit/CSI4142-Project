@@ -55,11 +55,16 @@ CREATE TABLE [IF NOT EXISTS] Event_Dimension(
 CREATE TABLE [IF NOT EXISTS] Education_Dimension(
     education_key int primary key,
     public_spending_percent_of_gdp float,
-    literacy_rate_total float,
-    literacy_rate_male float,
-    literacy_rate_female float,
+    literacy_rate_adult_total float,
+    literacy_rate_adult_male float,
+    literacy_rate_adult_female float,
     primary_school_enrollment_percent_of_gross float,
+    primary_school_enrollment_percent_of_net float,
+    primary_completion_rate float,
+    primary_completion_male float,
+    primary_completion_female float,
     secondary_school_enrollment_percent_of_gross float,
+    secondary_school_enrollment_percent_of_net float,
     tertiary_school_enrollment_percent_of_gross float
 );
 
