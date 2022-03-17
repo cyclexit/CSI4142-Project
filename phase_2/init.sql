@@ -19,4 +19,10 @@ CREATE TABLE [IF NOT EXISTS] Country_Dimension(
     hci_female float,
     hci_male float,
     gni_per_capita_usd float
-)
+);
+
+CREATE TABLE [IF NOT EXISTS] Year_Dimension(
+    year_key int primary key,
+    year_num int,
+    decade int
+);
