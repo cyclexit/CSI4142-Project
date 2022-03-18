@@ -1,0 +1,10 @@
+country_key,country_name,country_code,two_alpha_code,capital,region,continent,currency,income_group,system_of_trade,government_accounting_concept,balance_of_payments_manual_in_use,IMF_data_dissemination_standard
+0,Canada,CAN,CA,Ottawa,North America,Central America,Canadian dollar,High income,General trade system,Consolidated central government,BPM6,Special Data Dissemination Standard Plus (SDDS Plus)
+1,Egypt,EGY,EG,Cairo,Middle East & North Africa,Africa,Egyptian pound,Lower middle income,General trade system,Budgetary central government,BPM5 (Converted into BPM6 by IMF),Special Data Dissemination Standard (SDDS)
+2,Indonesia,IDN,ID,Jakarta,East Asia & Pacific,Asia,Indonesian rupiah,Lower middle income,General trade system,Consolidated central government,BPM6,Special Data Dissemination Standard (SDDS)
+3,India,IND,IN,New Delhi,South Asia,Asia,Indian rupee,Lower middle income,General trade system,Consolidated central government,BPM6,Special Data Dissemination Standard (SDDS)
+4,Iran,IRN,IR,Tehran,Middle East & North Africa,Asia,Iranian rial,Lower middle income,Special trade system,Consolidated central government,BPM5 (Converted into BPM6 by IMF),Enhanced General Data Dissemination System (e-GDDS)
+5,Kenya,KEN,KE,Nairobi,Sub-Saharan Africa,Africa,Kenyan shilling,Lower middle income,General trade system,Consolidated central government,BPM6,Enhanced General Data Dissemination System (e-GDDS)
+6,Mexico,MEX,MX,Mexico City,Latin America & Caribbean,Central America,Mexican peso,Upper middle income,General trade system,Consolidated central government,BPM6,Special Data Dissemination Standard (SDDS)
+7,Nigeria,NGA,NG,Abuja,Sub-Saharan Africa,Africa,Nigerian naira,Lower middle income,General trade system,Budgetary central government,BPM6,Enhanced General Data Dissemination System (e-GDDS)
+8,United States,USA,US,Washington,North America,North America,U.S. dollar,High income,General trade system,Consolidated central government,BPM6,Special Data Dissemination Standard Plus (SDDS Plus)
