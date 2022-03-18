@@ -12,6 +12,7 @@ POPULATION_DIMENSION = "population_dimension"
 YEAR_DIMENSION = "year_dimension"
 
 # csv relative file path
-PATH_PREFIX = "../data/"
-POPULATION_DIMENSION_CSV = os.path.join(PATH_PREFIX, "population_dimension.csv")
-YEAR_DIMENSION_CSV = os.path.join(PATH_PREFIX, "year_dimension.csv")
+CSV_PATH_PREFIX = "../data/"
+MEASURES_CSV = os.path.join(CSV_PATH_PREFIX, "measures.csv")
+POPULATION_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "population_dimension.csv")
+YEAR_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "year_dimension.csv")
