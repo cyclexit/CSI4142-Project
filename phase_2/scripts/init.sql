@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS Event_Dimension(
     years_since_party_formation int,
     control_all_houses boolean,
     election_in_year boolean,
-    total_seats boolean
+    total_seats int
 );
 
 CREATE TABLE IF NOT EXISTS Education_Dimension(
