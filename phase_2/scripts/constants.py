@@ -10,14 +10,22 @@ HEALTH_DIMENSION = "health_dimension"
 LIFE_QUALITY_DIMENSION = "life_quality_dimension"
 POPULATION_DIMENSION = "population_dimension"
 YEAR_DIMENSION = "year_dimension"
+POLITICAL_EVENT_DIMENSION = "political_event_dimension"
 
 # csv relative file path
 CSV_PATH_PREFIX = "../data/"
-MEASURES_CSV = os.path.join(CSV_PATH_PREFIX, "measures.csv")
-POPULATION_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "population_dimension.csv")
-YEAR_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "year_dimension.csv")
-COUNTRY_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "country_dimension.csv")
-LIFE_QUALITY_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "life_quality_dimension.csv")
-EDUCATION_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "education_dimension.csv")
-HEALTH_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "health_dimension.csv")
+FACT_TABLE_CSV = os.path.join(CSV_PATH_PREFIX, f"{FACT_TABLE}.csv")
+POPULATION_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{POPULATION_DIMENSION}.csv")
+YEAR_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{YEAR_DIMENSION}.csv")
+COUNTRY_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{COUNTRY_DIMENSION}.csv")
+POLITICAL_EVENT_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{POLITICAL_EVENT_DIMENSION}.csv")
+LIFE_QUALITY_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{LIFE_QUALITY_DIMENSION}.csv")
+EDUCATION_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{EDUCATION_DIMENSION}.csv")
+HEALTH_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{HEALTH_DIMENSION}.csv")
 
+# country list
+COUNTRY_LIST = [
+    "Canada", "United States", "Mexico",
+    "India", "Indonesia", "Iran",
+    "Egypt", "Kenya", "Nigeria"
+]
