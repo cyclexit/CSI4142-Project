@@ -1,6 +1,5 @@
 from configparser import ConfigParser
 import psycopg2
-import pandas as pd
 
 def db_config(filename='database.ini', section='postgresql'):
     '''
@@ -41,11 +40,3 @@ def db_connect():
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
 
-def insert_table_from_csv(file_path, table_name, cursor):
-    data = pd.read_csv(file_path)
-    data.drop(["Country Code", "Year"])
-    data = [tuple(x) for x in data.to_numpy()]
-    print(data[0])
-    template = ','.join(['%s'] * len(data))
-    query = 'INSERT INTO ' + table_name +' VALUES {}'.format(template)
-    cursor.execute(query, data)
