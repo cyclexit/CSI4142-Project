@@ -39,13 +39,17 @@ CREATE TABLE IF NOT EXISTS Population_Dimension(
     population_ages_65_and_above bigint
 );
 
-CREATE TABLE IF NOT EXISTS Event_Dimension(
-    event_key int primary key,
-    event_name varchar(255),
-    event_description varchar(255),
-    event_outcome varchar(255),
-    event_start_date date,
-    event_end_date date
+CREATE TABLE IF NOT EXISTS Political_Event_Dimension(
+    political_event_key int primary_key,
+    system varchar(255),
+    finite_term_in_office boolean,
+    years_in_power int,
+    party_orientation varchar(255),
+    party_name varchar(255),
+    years_since_party_formation int,
+    control_all_houses boolean,
+    election_in_year boolean,
+    total_seats boolean,
 );
 
 CREATE TABLE IF NOT EXISTS Education_Dimension(
