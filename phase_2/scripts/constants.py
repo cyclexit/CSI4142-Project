@@ -20,3 +20,10 @@ YEAR_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{YEAR_DIMENSION}.csv")
 COUNTRY_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{COUNTRY_DIMENSION}.csv")
 POLITICAL_EVENT_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{POLITICAL_EVENT_DIMENSION}.csv")
 LIFE_QUALITY_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{LIFE_QUALITY_DIMENSION}.csv")
+
+# country list
+COUNTRY_LIST = [
+    "Canada", "United States", "Mexico",
+    "India", "Indonesia", "Iran",
+    "Egypt", "Kenya", "Nigeria"
+]
