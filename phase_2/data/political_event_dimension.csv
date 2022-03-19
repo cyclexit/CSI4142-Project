@@ -1,4 +1,4 @@
-political_event_key,Country Code,Year,system,finite_term_in_office,years_in_power,party_orientation,party_name,years_since_party_formation,control_all_houses,election_in_year,total_seats
+event_key,Country Code,Year,system,finite_term_in_office,years_in_power,party_orientation,party_name,years_since_party_formation,control_all_houses,election_in_year,total_seats
 0,CAN,2005.0,Parliamentary,True,3.0,Left,LPC,151.0,False,False,308.0
 1,CAN,2006.0,Parliamentary,True,4.0,Left,LPC,152.0,False,False,308.0
 2,CAN,2007.0,Parliamentary,True,1.0,Right,CPC,4.0,False,False,308.0
