@@ -39,4 +39,3 @@ def db_connect():
         return db_conn, db_cur
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
-
