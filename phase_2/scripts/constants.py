@@ -18,4 +18,8 @@ MEASURES_CSV = os.path.join(CSV_PATH_PREFIX, "measures.csv")
 POPULATION_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "population_dimension.csv")
 YEAR_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "year_dimension.csv")
 COUNTRY_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "country_dimension.csv")
+<<<<<<< HEAD
 POLITICAL_EVENT_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, f"{POLITICAL_EVENT_DIMENSION}.csv")
+=======
+LIFE_QUALITY_DIMENSION_CSV = os.path.join(CSV_PATH_PREFIX, "life_quality_dimension.csv")
+>>>>>>> phase_2
