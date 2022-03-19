@@ -1,0 +1,6 @@
+# database config file
+database.ini
+# python virtual env for pip
+venv
+# python files and dirs
+__pycache__/
