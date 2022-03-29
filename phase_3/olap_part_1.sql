@@ -126,9 +126,21 @@ order by (C.country_name, Y.year_num, LQ.life_quality_key);
 
 /**
  * Part 1. d. Combining OLAP operations
- * 3rd query:
- * 
+ * 3rd query: Dice and roll-up
+ * The average adult prevalence of overweight in Asia and Americas between 2005 and 2009.
  */
+select C.continent, Y.year_num, avg(H.prevalence_of_overweight_adult) as avg_prevalence_of_overweight_adult
+from country_dimension as C,
+    health_dimension as H,
+    year_dimension as Y,
+    Fact_Table as F
+where F.year_key = Y.year_key
+    and F.country_key = C.country_key
+    and F.health_key = H.health_key
+    and C.continent in ('Americas', 'Asia')
+    and Y.year_num between 2005 and 2009
+group by (C.continent, Y.year_num)
+order by (C.continent, Y.year_num);
 
 /**
  * Part 1. d. Combining OLAP operations
