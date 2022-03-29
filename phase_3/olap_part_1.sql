@@ -87,3 +87,39 @@ where F.year_key = Y.year_key
     and Y.year_num between 2010 and 2015
 group by (C.country_name, Y.year_num, H.health_key)
 order by (C.country_name, Y.year_num);
+
+/**
+ * Part 1. d. Combining OLAP operations
+ * 1st query: Dice and roll-up.
+ * The average birth rate in United States and Mexico in 2010's.
+ */
+select C.country_name, Y.decade, avg(P.birth_rate) as avg_birth_rate
+from country_dimension as C,
+    population_dimension as P,
+    year_dimension as Y,
+    Fact_Table as F
+where F.year_key = Y.year_key
+    and F.country_key = C.country_key
+    and F.population_key = P.population_key
+    and C.country_name in ('Mexico', 'United States')
+    and Y.decade = 2010
+group by (C.country_name, Y.decade)
+order by (C.country_name, Y.decade);
+
+/**
+ * Part 1. d. Combining OLAP operations
+ * 2nd query:
+ * 
+ */
+
+/**
+ * Part 1. d. Combining OLAP operations
+ * 3rd query:
+ * 
+ */
+
+/**
+ * Part 1. d. Combining OLAP operations
+ * 4th query:
+ * 
+ */
