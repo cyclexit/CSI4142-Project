@@ -52,13 +52,24 @@ order by (C.country_name, Y.year_num);
 
 /**
  * Part 1. c. Dice
- * 
- * 
+ * The first Dice query.
+ * The male and female life expectancies in Canada and Mexico in each year.
+ * Dice on the population dimension (female and male life expectancies) and country dimension (Canada and Mexico).
  */
-
+select C.country_name, Y.year_num, P.life_expectancy_male, P.life_expectancy_female
+from country_dimension as C,
+    population_dimension as P,
+    year_dimension as Y,
+    Fact_Table as F
+where F.year_key = Y.year_key
+    and F.country_key = C.country_key
+    and F.population_key = P.population_key
+    and C.country_name in ('Canada', 'Mexico')
+group by (C.country_name, Y.year_num, P.population_key)
+order by (C.country_name, Y.year_num);
 
 /**
  * Part 1. c. Dice
- * 
+ * The second Dice query.
  * 
  */
