@@ -108,9 +108,21 @@ order by (C.country_name, Y.decade);
 
 /**
  * Part 1. d. Combining OLAP operations
- * 2nd query:
- * 
+ * 2nd query: Dice and drill-down
+ * The open defecation rate in India and United Stated in each year
  */
+select C.country_name, Y.year_num, LQ.open_defecation_rate
+from country_dimension as C,
+    life_quality_dimension as LQ,
+    year_dimension as Y,
+    Fact_Table as F
+where F.year_key = Y.year_key
+    and F.country_key = C.country_key
+    and F.life_quality_key = LQ.life_quality_key
+    and C.country_name in ('India', 'United States')
+group by (C.country_name, Y.year_num, LQ.life_quality_key)
+order by (C.country_name, Y.year_num, LQ.life_quality_key);
+
 
 /**
  * Part 1. d. Combining OLAP operations
