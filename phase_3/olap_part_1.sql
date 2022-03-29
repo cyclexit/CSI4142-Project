@@ -144,6 +144,16 @@ order by (C.continent, Y.year_num);
 
 /**
  * Part 1. d. Combining OLAP operations
- * 4th query:
- * 
+ * 4th query: Dice and drill-down
+ * The human development index of the countries in Asia and Americas in 2010's.
  */
+select C.country_name, C.continent, Y.year_num, F.human_development_index
+from country_dimension as C,
+    year_dimension as Y,
+    Fact_Table as F
+where F.year_key = Y.year_key
+    and F.country_key = C.country_key
+    and C.continent in ('Asia', 'Americas')
+    and Y.decade = 2010
+group by (C.country_name, C.continent, Y.year_num, F.human_development_index)
+order by (C.country_name, C.continent, Y.year_num);
